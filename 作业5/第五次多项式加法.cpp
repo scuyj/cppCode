@@ -13,7 +13,7 @@ public:
 		judge = 0;
 		for (int i = 0; 1; i++)
 		{
-			scanf_s("%d %d", &mi, &xishu);
+			scanf("%d %d", &mi, &xishu);
 			res[mi] += xishu;
 
 			if (mi == 0)
