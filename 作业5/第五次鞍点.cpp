@@ -21,7 +21,7 @@ public:
 		{
 			for (int j = 0; j < n; j++)
 			{
-				scanf_s("%d", &matrix[i][j]);
+				scanf("%d", &matrix[i][j]);
 			}
 			
 		}
@@ -76,7 +76,7 @@ public:
 int main()
 {
 	int n;
-	scanf_s("%d", &n);
+	scanf("%d", &n);
 
 	anDian matrix1(n);
 	matrix1.creatMatrix();
