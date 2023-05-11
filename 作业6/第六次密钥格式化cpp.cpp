@@ -36,7 +36,15 @@ public:
 	{
 		int i;
 		int first_len = len2 % group_length;
-		int res_group = (len2 - 1) / group_length;
+		int res_group;
+		int judge=0;
+		if (first_len == 0)
+		{
+			res_group = len2 / group_length;
+			judge = 1;
+		}
+		else
+			res_group = (len2 - 1) / group_length;
 
 		for (i = 0; i < first_len; i++)
 		{
@@ -45,7 +53,13 @@ public:
 		
 		for (int j = 0; j < res_group; j++)
 		{
-			cout << '-';
+			if (judge == 0)
+			{
+				cout << '-';
+			}
+			else
+				judge = 0;
+			
 			for (int x = i; x < group_length + i; x++)
 			{
 				cout << key2[x];
